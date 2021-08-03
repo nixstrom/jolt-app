@@ -1,5 +1,13 @@
 {
   "main": "node_modules/expo/AppEntry.js",
+  "name": "jolt-app",
+  "version": "0.1.0",
+  "description": "A small note-taking app, written in React Native",
+  "author": {
+    "name": "Nikki Strømsnes",
+    "email": "hello@tinybits.dk",
+    "url": "https://tinybits.dk"
+  },
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
@@ -19,6 +27,7 @@
     "@babel/core": "^7.9.0",
     "@types/react": "~16.9.35",
     "@types/react-native": "~0.63.2",
+    "babel-plugin-module-resolver": "^4.1.0",
     "typescript": "~4.0.0"
   },
   "private": true
