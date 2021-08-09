@@ -1,41 +1,48 @@
 {
-  "main": "node_modules/expo/AppEntry.js",
-  "name": "jolt-app",
-  "version": "0.1.0",
-  "description": "A small note-taking app, written in React Native",
-  "author": {
-    "name": "Nikki Strømsnes",
-    "email": "hello@tinybits.dk",
-    "url": "https://tinybits.dk"
-  },
-  "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web",
-    "test": "jest --watch --config ./jest.config.ts",
-    "eject": "expo eject"
-  },
-  "dependencies": {
-    "expo": "~42.0.1",
-    "expo-status-bar": "~1.0.4",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-42.0.0.tar.gz",
-    "react-native-web": "~0.13.12"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.9.0",
-    "@testing-library/react-native": "^7.2.0",
-    "@types/jest": "^26.0.24",
-    "@types/react": "~16.9.35",
-    "@types/react-native": "~0.63.2",
-    "@types/react-test-renderer": "^17.0.1",
-    "babel-plugin-module-resolver": "^4.1.0",
-    "jest": "^27.0.6",
-    "react-test-renderer": "^17.0.2",
-    "ts-node": "^10.1.0",
-    "typescript": "~4.0.0"
-  },
-  "private": true
+	"main": "node_modules/expo/AppEntry.js",
+	"name": "jolt-app",
+	"version": "0.1.0",
+	"description": "A small note-taking app, written in React Native",
+	"author": {
+		"name": "Nikki Strømsnes",
+		"email": "hello@tinybits.dk",
+		"url": "https://tinybits.dk"
+	},
+	"scripts": {
+		"start": "expo start",
+		"android": "expo start --android",
+		"ios": "expo start --ios",
+		"web": "expo start --web",
+		"test": "jest --watch --config ./jest.config.ts",
+		"eject": "expo eject"
+	},
+	"dependencies": {
+		"expo": "~42.0.1",
+		"expo-status-bar": "~1.0.4",
+		"react": "16.13.1",
+		"react-dom": "16.13.1",
+		"react-native": "https://github.com/expo/react-native/archive/sdk-42.0.0.tar.gz",
+		"react-native-web": "~0.13.12"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.9.0",
+		"@testing-library/react-native": "^7.2.0",
+		"@types/jest": "^26.0.24",
+		"@types/react": "~16.9.35",
+		"@types/react-native": "~0.63.2",
+		"@types/react-test-renderer": "^17.0.1",
+		"@typescript-eslint/eslint-plugin": "^4.29.0",
+		"@typescript-eslint/parser": "^4.29.0",
+		"babel-plugin-module-resolver": "^4.1.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-prettier": "^3.4.0",
+		"eslint-plugin-react": "^7.24.0",
+		"eslint-plugin-react-native": "^3.11.0",
+		"jest": "^27.0.6",
+		"prettier": "^2.3.2",
+		"react-test-renderer": "^17.0.2",
+		"ts-node": "^10.1.0",
+		"typescript": "~4.0.0"
+	},
+	"private": true
 }
