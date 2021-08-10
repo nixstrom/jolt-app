@@ -1,5 +1,5 @@
 import React from "react"
-import { Button as RNButton, ButtonProps } from "react-native"
+import { Button as RNUIButton, ButtonProps } from "react-native-ui-lib"
 
 type Props = {
 	children: string
@@ -7,5 +7,5 @@ type Props = {
 }
 
 export const Button = ({ children, onPress }: Props) => (
-	<RNButton title={children} onPress={onPress} />
+	<RNUIButton label={children} onPress={onPress} />
 )
