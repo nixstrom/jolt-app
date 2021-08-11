@@ -1,9 +1,10 @@
 import React, { useState } from "react"
-import { StyleSheet, View, TextInput } from "react-native"
-import { Note } from "~types"
+import { StyleSheet, TextInput } from "react-native"
+import { Note, ScreenProps } from "~types"
+import { PrimaryView } from "~components/templates/PrimaryView"
 import { Button } from "~components/atoms/Button"
 
-type Props = {
+type Props = ScreenProps<"CreateNote"> & {
 	onAddNote: (note: Note) => void
 }
 
@@ -25,17 +26,16 @@ export const CreateNote = ({ onAddNote }: Props) => {
 	}
 
 	return (
-		<View style={styles.container}>
+		<PrimaryView style={styles.container}>
 			<TextInput style={styles.input} value={note} onChangeText={setNote} />
 			<Button onPress={handleAddNote}>Create note</Button>
-		</View>
+		</PrimaryView>
 	)
 }
 
 const styles = StyleSheet.create({
 	container: {
-		flex: 1,
-		backgroundColor: "#f0f",
+		backgroundColor: "#00f",
 		alignItems: "center",
 		justifyContent: "flex-start",
 		paddingTop: 60,
