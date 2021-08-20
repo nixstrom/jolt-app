@@ -1,12 +1,15 @@
 import React, { useState } from "react"
-import { StyleSheet, TextInput } from "react-native"
+import { StyleSheet } from "react-native"
 import { Note, ScreenProps } from "~types"
 import { PrimaryView } from "~components/templates/PrimaryView"
 import { Button } from "~components/atoms/Button"
+import { TextArea } from "~components/atoms/TextArea"
 
 type Props = ScreenProps<"CreateNote"> & {
 	onAddNote: (note: Note) => void
 }
+
+const MAX_LENGTH = 140
 
 export const CreateNote = ({ onAddNote }: Props) => {
 	const [note, setNote] = useState("")
@@ -27,7 +30,13 @@ export const CreateNote = ({ onAddNote }: Props) => {
 
 	return (
 		<PrimaryView style={styles.container}>
-			<TextInput style={styles.input} value={note} onChangeText={setNote} />
+			<TextArea
+				autoFocus={true}
+				maxLength={MAX_LENGTH}
+				value={note}
+				onChangeText={setNote}
+				placeholder="Enter note"
+			/>
 			<Button onPress={handleAddNote}>Create note</Button>
 		</PrimaryView>
 	)
@@ -35,25 +44,8 @@ export const CreateNote = ({ onAddNote }: Props) => {
 
 const styles = StyleSheet.create({
 	container: {
-		backgroundColor: "#00f",
 		alignItems: "center",
 		justifyContent: "flex-start",
 		paddingTop: 60,
-	},
-	heading: {
-		fontSize: 24,
-		fontWeight: "bold",
-	},
-	input: {
-		backgroundColor: "white",
-		width: "90%",
-		margin: 10,
-		padding: 10,
-	},
-	note: {
-		borderTopColor: "#eee",
-		borderTopWidth: 1,
-		padding: 10,
-		width: "100%",
 	},
 })
